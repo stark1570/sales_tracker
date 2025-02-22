@@ -1,0 +1,289 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Common Form Styles */
+.fish-entry-form,
+.order-details,
+.sales-visualization {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fish-entry,
+.fish-detail,
+.order-details div {
+  margin-bottom: 15px;
+}
+
+/* Input Styles */
+.fish-entry input,
+.order-details input,
+.order-details select,
+.sales-visualization select,
+.sales-visualization input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button.add-fish-btn {
+  background-color: #28a745;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+button.proceed-btn {
+  background-color: #007bff;
+  width: 100%;
+}
+
+button.visualization-btn {
+  background-color: #6c757d;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Table Styles */
+.pending-orders table,
+.sales-visualization table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.pending-orders th,
+.pending-orders td,
+.sales-visualization th,
+.sales-visualization td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.pending-orders th,
+.sales-visualization th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.pending-orders tr:hover,
+.sales-visualization tr:hover {
+  background-color: #f8f9fa;
+}
+
+.pending-orders select {
+  width: 100%;
+  padding: 5px;
+}
+
+/* Fish Entry Specific Styles */
+.fish-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fish-entry label {
+  font-weight: bold;
+  min-width: 100px;
+}
+
+/* Fish Entry Form Specific Styles */
+.fish-entry-form .fish-entry {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.fish-entry-form .fish-entry input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fish-entry-form .total-investment {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Status Badge Styles */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.resolved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.canceled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Filter Section Styles */
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-section select,
+.filter-section input {
+  min-width: 150px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fish-entry-form,
+  .order-details,
+  .sales-visualization {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .fish-entry {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fish-entry label {
+    margin-bottom: 5px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-section select,
+  .filter-section input {
+    width: 100%;
+  }
+
+  .pending-orders table,
+  .sales-visualization table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fish-entry-form,
+.order-details,
+.sales-visualization {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Form Section Styles */
+.form-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+/* Summary Section Styles */
+.summary-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.summary-section .total {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Success Message Styles */
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
